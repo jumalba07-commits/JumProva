@@ -70,8 +70,8 @@ class MainWindow:
             import os
             
             # Cargar la imagen y redimensionarla (80x80)
-            if os.path.exists("logo.ico") or os.path.exists("jumprova.png"):
-                nombre_logo = "logo.ico" if os.path.exists("logo.ico") else "jumprova.png"
+            if os.path.exists("jumprova.ico") or os.path.exists("jumprova.png"):
+                nombre_logo = "jumprova.ico" if os.path.exists("jumprova.ico") else "jumprova.png"
                 img = Image.open(nombre_logo)
                 img = img.resize((60, 60), Image.Resampling.LANCZOS)
                 self.logo_img = ImageTk.PhotoImage(img)

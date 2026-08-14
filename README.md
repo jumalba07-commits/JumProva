@@ -7,7 +7,12 @@
 ![Python](https://img.shields.io/badge/python-3.x-yellow)
 
 
-⭐ **¡Dale una estrella si te gusta!** ⭐
+**¡Dale una estrella para apoyar el proyecto!**
+
+[![GitHub stars](https://img.shields.io/github/stars/jumalba07-commits/JumProva)](https://github.com/jumalba07-commits/JumProva)
+[![GitHub forks](https://img.shields.io/github/forks/jumalba07-commits/JumProva)](https://github.com/jumalba07-commits/JumProva)
+
+[![Descarga](https://img.shields.io/badge/Descarga-⬇️-green)](https://github.com/jumalba07-commits/JumProva/releases)
 
 🐛 **Reporta errores**: [Issues](https://github.com/jumalba07-commits/JumProva/issues)
 

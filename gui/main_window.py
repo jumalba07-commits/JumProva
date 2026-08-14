@@ -63,24 +63,40 @@ class MainWindow:
         inner_frame.pack(pady=8)
         
         # ============================================
-        # MOSTRAR LOGO
+        # MOSTRAR LOGO (CON SOPORTE PARA .EXE)
         # ============================================
         try:
             from PIL import Image, ImageTk
             import os
+            import sys
             
-            # Cargar la imagen y redimensionarla (80x80)
-            if os.path.exists("logo.ico") or os.path.exists("jumprova.png"):
-                nombre_logo = "logo.ico" if os.path.exists("logo.ico") else "jumprova.png"
-                img = Image.open(nombre_logo)
+            # Determinar la ruta base (funciona en .exe y en desarrollo)
+            if getattr(sys, 'frozen', False):
+                # Estamos en el .exe
+                base_path = sys._MEIPASS
+            else:
+                # Estamos en desarrollo
+                base_path = os.path.abspath(".")
+            
+            logo_path = os.path.join(base_path, "jumprova.png")
+            print(f"🔍 Buscando logo en: {logo_path}")  # Para depurar
+            
+            if os.path.exists(logo_path):
+                img = Image.open(logo_path)
                 img = img.resize((60, 60), Image.Resampling.LANCZOS)
                 self.logo_img = ImageTk.PhotoImage(img)
                 
                 lbl_logo = tk.Label(inner_frame, image=self.logo_img, bg="#2c3e50")
                 lbl_logo.pack(side=tk.LEFT, padx=(0, 15))
-        except:
-            # Si no hay imagen, no pasa nada
-            pass
+                print("✅ Logo cargado correctamente")
+            else:
+                # Si no hay logo, usar emoji
+                print("⚠️ Logo no encontrado, usando emoji")
+                tk.Label(inner_frame, text="📂", font=("Arial", 40), bg="#2c3e50").pack(side=tk.LEFT, padx=(0, 15))
+        except Exception as e:
+            print(f"❌ Error cargando logo: {e}")
+            # Si falla, usar emoji
+            tk.Label(inner_frame, text="📂", font=("Arial", 40), bg="#2c3e50").pack(side=tk.LEFT, padx=(0, 15))
         
         # Texto del título
         text_frame = tk.Frame(inner_frame, bg="#2c3e50")

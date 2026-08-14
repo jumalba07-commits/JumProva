@@ -24,7 +24,14 @@
 ## 🚀 ¿Qué es JumProva?
 
 JumProva es una aplicación **todo-en-uno** para organizar, limpiar, gestionar metadatos y proteger tu sistema de archivos.
+JumProva es un proyecto personal que nace de la necesidad de tener 
+una herramienta completa y gratuita para organizar archivos.
 
+El desarrollo ha sido guiado con una visión clara de lo que debía hacer, 
+combinando creatividad, diseño y tecnología para ofrecer una experiencia 
+intuitiva y funcional.
+
+💡 **Todos los comentarios, sugerencias y contribuciones son bienvenidos.**
 ---
 
 ## ✨ Funcionalidades

@@ -6,6 +6,14 @@
 ![Licencia](https://img.shields.io/badge/license-MIT-green)
 ![Python](https://img.shields.io/badge/python-3.x-yellow)
 
+
+⭐ **¡Dale una estrella si te gusta!** ⭐
+
+🐛 **Reporta errores**: [Issues](https://github.com/jumalba07-commits/JumProva/issues)
+
+💡 **Sugerencias**: Abre un Issue o un Pull Request
+
+
 ---
 
 ## 🚀 ¿Qué es JumProva?

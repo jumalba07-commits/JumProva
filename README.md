@@ -50,13 +50,13 @@ Puedes descargar la última versión desde la sección [**Releases**](https://gi
 
 ### Opción 1: Ejecutable (recomendado)
 
-1. Descarga `JumProva.exe` desde [Releases](https://github.com/TU_USUARIO/JumProva/releases)
+1. Descarga `JumProva.exe` desde [Releases](https://github.com/jumalba07-commits/JumProva/releases)
 2. Ejecútalo (no necesita instalación)
 
 ### Opción 2: Desde el código fuente
 
 ```bash
-git clone https://github.com/TU_USUARIO/JumProva.git
+git clone https://github.com/jumalba07-commits/JumProva.git
 cd JumProva
 pip install -r requirements.txt
 python main.py

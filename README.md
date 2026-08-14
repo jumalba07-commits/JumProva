@@ -30,7 +30,6 @@ JumProva es una aplicación **todo-en-uno** para organizar, limpiar, gestionar m
 
 ## 📸 Capturas de pantalla
 
-![Pantalla principal](screenshots/main.png)
 ![Organizar](screenshots/organizar.jpg)
 ![Limpiar](screenshots/limpiar.jpg)
 ![Desorganizar](screenshots/desorganizar.jpg)

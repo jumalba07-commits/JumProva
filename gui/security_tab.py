@@ -5,6 +5,7 @@ import os
 import re
 from pathlib import Path
 import time
+import shutil
 
 class SecurityTab:
     """Pestaña de seguridad - Cazador de malware (ESTILO LIBERADOR)"""

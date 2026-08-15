@@ -1,0 +1,3 @@
+Pillow>=9.0.0        # Metadatos EXIF
+python-magic>=0.4.27 # Detección de MIME types (opcional)
+pyinstaller>=5.0.0   # Para crear .exe

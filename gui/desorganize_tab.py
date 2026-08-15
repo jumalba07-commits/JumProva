@@ -296,6 +296,7 @@ class DesorganizeTab:
                 self.parent.after(0, lambda: self.btn_scan.config(state="normal"))
                 
             except Exception as e:
+                error_msg = str(e)
                 self.parent.after(0, lambda: self._log_message(f"❌ Error al escanear: {str(e)}", "error"))
                 self.parent.after(0, lambda: self.btn_scan.config(state="normal"))
         
@@ -395,6 +396,7 @@ class DesorganizeTab:
             try:
                 self._desorganize_files(source, dest)
             except Exception as e:
+                error_msg = str(e)
                 self.parent.after(0, lambda: messagebox.showerror("Error", f"Error inesperado:\n{str(e)}"))
             finally:
                 self.parent.after(0, lambda: self.btn_desorganize.config(state="normal"))

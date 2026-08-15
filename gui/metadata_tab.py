@@ -369,6 +369,7 @@ class MetadataTab:
                 self.parent.after(0, lambda: self.btn_scan.config(state="normal"))
                 
             except Exception as e:
+                error_msg = str(e)
                 self.parent.after(0, lambda: self._log_message(f"❌ Error al escanear: {str(e)}", "error"))
                 self.parent.after(0, lambda: self.btn_scan.config(state="normal"))
         
@@ -1071,6 +1072,7 @@ class MetadataTab:
             try:
                 self._process_files()
             except Exception as e:
+                error_msg = str(e)
                 self.parent.after(0, lambda: messagebox.showerror("Error", f"Error inesperado:\n{str(e)}"))
             finally:
                 self.parent.after(0, lambda: self.btn_process.config(state="normal"))

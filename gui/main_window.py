@@ -642,6 +642,7 @@ Total archivos procesados: {stats['moved'] + stats['copied']}
                 if isinstance(result, dict) and "error" in result:
                     self.root.after(0, lambda: messagebox.showerror("Error", result["error"]))
             except Exception as e:
+                error_msg = str(e)
                 self.root.after(0, lambda: messagebox.showerror("Error", f"Error inesperado:\n{str(e)}"))
             finally:
                 self.root.after(0, lambda: self._set_running_state(False))

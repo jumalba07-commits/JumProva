@@ -828,6 +828,7 @@ class SpaceLiberatorTab:
                 self.parent.after(0, self._mostrar_resultados)
                 
             except Exception as e:
+                error_msg = str(e)
                 self.parent.after(0, lambda: self._log(f"❌ Error: {str(e)}", "error"))
             finally:
                 self.parent.after(0, lambda: self.btn_scan.config(state="normal"))

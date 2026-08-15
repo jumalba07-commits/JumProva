@@ -152,6 +152,7 @@ class CleanerTab:
                 # Mostrar resultados en la interfaz
                 self.parent.after(0, self._show_results)
             except Exception as e:
+                error_msg = str(e)
                 self.parent.after(0, lambda: messagebox.showerror("Error", f"Error al escanear:\n{str(e)}"))
                 self.parent.after(0, lambda: self.label_stats.config(text="❌ Error en el escaneo"))
         

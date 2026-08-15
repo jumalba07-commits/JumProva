@@ -343,6 +343,7 @@ class SecurityTab:
                 self.parent.after(0, lambda: self._log("❌ psutil no instalado. Ejecuta: pip install psutil", "error"))
                 self.parent.after(0, lambda: self._update_progress(0, "Error: psutil no instalado"))
             except Exception as e:
+                error_msg = str(e)
                 self.parent.after(0, lambda: self._log(f"❌ Error: {str(e)}", "error"))
             finally:
                 self.parent.after(0, lambda: self.btn_analizar.config(state="normal"))
@@ -647,6 +648,7 @@ class SecurityTab:
             messagebox.showinfo("Éxito", f"✅ Archivo eliminado: {nombre}")
             
         except Exception as e:
+            error_msg = str(e)
             self._log(f"❌ Error al eliminar {nombre}: {str(e)}", "error")
             messagebox.showerror("Error", f"No se pudo eliminar el archivo:\n{str(e)}")
     
@@ -691,6 +693,7 @@ class SecurityTab:
                 self.parent.after(0, lambda: self._update_progress(100, "✅ Revisión completada"))
                 
             except Exception as e:
+                error_msg = str(e)
                 self.parent.after(0, lambda: self._log(f"❌ Error: {str(e)}", "error"))
             finally:
                 self.parent.after(0, lambda: self.btn_revisar.config(state="normal"))
@@ -810,6 +813,7 @@ class SecurityTab:
                 self.parent.after(0, lambda: self._log("❌ psutil no instalado", "error"))
                 self.parent.after(0, lambda: self._update_progress(0, "Error: psutil no instalado"))
             except Exception as e:
+                error_msg = str(e)
                 self.parent.after(0, lambda: self._log(f"❌ Error: {str(e)}", "error"))
             finally:
                 self.parent.after(0, lambda: self.btn_red.config(state="normal"))

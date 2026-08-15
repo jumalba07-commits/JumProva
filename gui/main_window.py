@@ -2,12 +2,8 @@ import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 from pathlib import Path
 from threading import Thread
-import queue
-
 from core.organizer import Organizer
 from config.settings import config
-from gui.cleaner_tab import CleanerTab
-from gui.desorganize_tab import DesorganizeTab
 from gui.metadata_tab import MetadataTab
 from gui.space_liberator_tab import SpaceLiberatorTab
 from gui.security_tab import SecurityTab
@@ -643,7 +639,7 @@ Total archivos procesados: {stats['moved'] + stats['copied']}
                     self.root.after(0, lambda: messagebox.showerror("Error", result["error"]))
             except Exception as e:
                 error_msg = str(e)
-                self.root.after(0, lambda: messagebox.showerror("Error", f"Error inesperado:\n{str(e)}"))
+                self.root.after(0, lambda: messagebox.showerror("Error", f"Error inesperado:\n{error_msg}"))
             finally:
                 self.root.after(0, lambda: self._set_running_state(False))
         

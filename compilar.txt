@@ -1,1 +1,1 @@
-python -m PyInstaller --onefile --windowed --icon=jumprova.ico --add-data "jumprova.png;." --hidden-import=psutil --hidden-import=mutagen --hidden-import=musicbrainzngs --hidden-import=PIL --name "JumProva" main.py
+python -m PyInstaller --onefile --windowed --icon=assets/jumprova.ico --add-data "assets/jumprova.png;assets" --hidden-import=psutil --hidden-import=mutagen --hidden-import=musicbrainzngs --hidden-import=PIL --name "JumProva" main.py

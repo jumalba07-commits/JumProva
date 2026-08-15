@@ -2,10 +2,11 @@ import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 from pathlib import Path
 from threading import Thread
+from mutagen.id3 import TIT2, TPE1, TALB, TDRC, TCON, COMM, TYER
+from mutagen.id3 import APIC
+from mutagen.id3 import ID3
 import os
 import re
-import shutil
-import json
 
 class MetadataTab:
     """Pestaña para buscar y editar metadatos de archivos de audio"""
@@ -370,7 +371,7 @@ class MetadataTab:
                 
             except Exception as e:
                 error_msg = str(e)
-                self.parent.after(0, lambda: self._log_message(f"❌ Error al escanear: {str(e)}", "error"))
+                self.parent.after(0, lambda: self._log_message(f"❌ Error al escanear: {error_msg}", "error"))
                 self.parent.after(0, lambda: self.btn_scan.config(state="normal"))
         
         Thread(target=scan, daemon=True).start()
@@ -717,8 +718,7 @@ class MetadataTab:
             if file_info["name"] == archivo:
                 try:
                     import mutagen
-                    from mutagen.id3 import ID3, APIC
-                    
+                                        
                     file_path = file_info["path"]
                     audio = mutagen.File(str(file_path))
                     if audio is None:
@@ -779,7 +779,7 @@ class MetadataTab:
                     audio.save()
                     
                     # Verificar si quedó alguna
-                    covers_restantes = [tag for tag in audio.tags.values() if tag.__class__.__name__ == 'APIC']
+                    _ = [tag for tag in audio.tags.values() if tag.__class__.__name__ == 'APIC']
                     
                     self._log_message(f"🗑️ Carátula eliminada de: {archivo}", "info")
                     
@@ -802,7 +802,7 @@ class MetadataTab:
         try:
             from PIL import Image
             import io
-            img = Image.open(io.BytesIO(image_data))
+            _ = Image.open(io.BytesIO(image_data))
             return True
         except:
             return False
@@ -854,7 +854,7 @@ class MetadataTab:
         
         # Obtener valores actuales
         values = list(tree.item(item, 'values'))
-        col_name = tree.heading(column)['text']
+        _ = tree.heading(column)['text']
         current_value = values[col_index] if col_index < len(values) else ""
         
         # Obtener posición de la celda
@@ -1073,7 +1073,7 @@ class MetadataTab:
                 self._process_files()
             except Exception as e:
                 error_msg = str(e)
-                self.parent.after(0, lambda: messagebox.showerror("Error", f"Error inesperado:\n{str(e)}"))
+                self.parent.after(0, lambda: messagebox.showerror("Error", f"Error inesperado:\n{error_msg}"))
             finally:
                 self.parent.after(0, lambda: self.btn_process.config(state="normal"))
                 self.parent.after(0, lambda: self.btn_scan.config(state="normal"))
@@ -1088,8 +1088,7 @@ class MetadataTab:
         processed = 0
         
         try:
-            import mutagen
-            from mutagen.id3 import ID3, TIT2, TPE1, TALB, TDRC, TCON, COMM, TYER
+            import mutagen            
         except ImportError:
             self._log_message("❌ Librería 'mutagen' no instalada", "error")
             self._log_message("📦 Instala con: pip install mutagen", "info")
@@ -1396,9 +1395,7 @@ class MetadataTab:
             # GUARDAR EN EL ARCHIVO DE AUDIO
             # ============================================
             try:
-                import mutagen
-                from mutagen.id3 import APIC, ID3, ID3NoHeaderError
-                
+                import mutagen              
                 audio = mutagen.File(str(file_path))
                 if audio is None:
                     self._log_message(f"   ⚠️ No se pudo leer el archivo de audio", "warning")
@@ -1562,8 +1559,7 @@ class MetadataTab:
             found = 0
             errors = 0
             processed = 0
-            sin_datos = 0
-            
+                       
             for file_info in self.current_files:
                 processed += 1
                 

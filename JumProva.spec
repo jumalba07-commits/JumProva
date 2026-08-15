@@ -5,7 +5,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('jumprova.png', '.')],
+    datas=[('assets/jumprova.png', 'assets')],
     hiddenimports=['psutil', 'mutagen', 'musicbrainzngs', 'PIL'],
     hookspath=[],
     hooksconfig={},
@@ -35,5 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['jumprova.ico'],
+    icon=['assets/jumprova.ico'],
 )

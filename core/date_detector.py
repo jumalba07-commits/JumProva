@@ -3,13 +3,16 @@ from datetime import datetime
 from pathlib import Path
 from config.settings import config
 
+
 class DateDetector:
     """Detecta la fecha de creación/captura de un archivo"""
-    
+
     def __init__(self):
-        self.priority = config.get("date_priority", ["exif", "modified", "created"])
+        self.priority = config.get(
+            "date_priority", [
+                "exif", "modified", "created"])
         self.exif_available = False
-        
+
         # Intentar importar PIL
         try:
             from PIL import Image
@@ -19,13 +22,13 @@ class DateDetector:
             self.exif_available = True
         except ImportError:
             self.exif_available = False
-    
+
     def get_date(self, file_path, use_metadata=True):
         """Obtiene la fecha del archivo según la prioridad configurada"""
         file_path = Path(file_path)
-        
+
         date = None
-        
+
         # Intentar diferentes métodos según prioridad
         for method in self.priority:
             if method == "exif" and use_metadata:
@@ -34,61 +37,64 @@ class DateDetector:
                 date = self._get_modified_date(file_path)
             elif method == "created":
                 date = self._get_created_date(file_path)
-            
+
             if date:
                 return date
-        
+
         # Si todo falla, usar fecha actual
         return datetime.now()
-    
+
     def _get_exif_date(self, file_path):
         """Extraer fecha de metadatos EXIF"""
         if not self.exif_available:
             return None
-        
+
         try:
             image = self.Image.open(file_path)
             exifdata = image._getexif()
-            
+
             if exifdata:
                 for tag_id, value in exifdata.items():
                     tag = self.TAGS.get(tag_id, tag_id)
                     if tag == "DateTimeOriginal":
                         try:
-                            return datetime.strptime(value, "%Y:%m:%d %H:%M:%S")
-                        except:
+                            return datetime.strptime(
+                                value, "%Y:%m:%d %H:%M:%S")
+                        except BaseException:
                             pass
                     elif tag == "DateTimeDigitized":
                         try:
-                            return datetime.strptime(value, "%Y:%m:%d %H:%M:%S")
-                        except:
+                            return datetime.strptime(
+                                value, "%Y:%m:%d %H:%M:%S")
+                        except BaseException:
                             pass
                     elif tag == "DateTime":
                         try:
-                            return datetime.strptime(value, "%Y:%m:%d %H:%M:%S")
-                        except:
+                            return datetime.strptime(
+                                value, "%Y:%m:%d %H:%M:%S")
+                        except BaseException:
                             pass
-        except:
+        except BaseException:
             pass
-        
+
         return None
-    
+
     def _get_modified_date(self, file_path):
         """Obtener fecha de modificación del sistema"""
         try:
             timestamp = os.path.getmtime(file_path)
             return datetime.fromtimestamp(timestamp)
-        except:
+        except BaseException:
             return None
-    
+
     def _get_created_date(self, file_path):
         """Obtener fecha de creación del sistema"""
         try:
             timestamp = os.path.getctime(file_path)
             return datetime.fromtimestamp(timestamp)
-        except:
+        except BaseException:
             return None
-    
+
     def extract_date_components(self, date):
         """Extraer año, mes y día de una fecha"""
         return {
@@ -98,7 +104,7 @@ class DateDetector:
             "month_name": self._get_month_name(date.month),
             "date": date
         }
-    
+
     def _get_month_name(self, month):
         """Obtener nombre del mes en español"""
         months = {

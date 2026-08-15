@@ -23,7 +23,7 @@ class MainWindow:
         # ICONO DE LA VENTANA
         # ============================================
         try:
-            self.root.iconbitmap("jumprova.ico")
+            self.root.iconbitmap("assets/jumprova.ico")
         except:
             pass
         
@@ -78,7 +78,7 @@ class MainWindow:
                 # Estamos en desarrollo
                 base_path = os.path.abspath(".")
             
-            logo_path = os.path.join(base_path, "jumprova.png")
+            logo_path = os.path.join(base_path, "assets", "jumprova.png")
                         
             if os.path.exists(logo_path):
                 img = Image.open(logo_path)

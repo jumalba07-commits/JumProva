@@ -79,8 +79,7 @@ class MainWindow:
                 base_path = os.path.abspath(".")
             
             logo_path = os.path.join(base_path, "jumprova.png")
-            print(f"🔍 Buscando logo en: {logo_path}")  # Para depurar
-            
+                        
             if os.path.exists(logo_path):
                 img = Image.open(logo_path)
                 img = img.resize((60, 60), Image.Resampling.LANCZOS)
@@ -88,13 +87,13 @@ class MainWindow:
                 
                 lbl_logo = tk.Label(inner_frame, image=self.logo_img, bg="#2c3e50")
                 lbl_logo.pack(side=tk.LEFT, padx=(0, 15))
-                print("✅ Logo cargado correctamente")
+              
             else:
                 # Si no hay logo, usar emoji
-                print("⚠️ Logo no encontrado, usando emoji")
+                
                 tk.Label(inner_frame, text="📂", font=("Arial", 40), bg="#2c3e50").pack(side=tk.LEFT, padx=(0, 15))
         except Exception as e:
-            print(f"❌ Error cargando logo: {e}")
+            
             # Si falla, usar emoji
             tk.Label(inner_frame, text="📂", font=("Arial", 40), bg="#2c3e50").pack(side=tk.LEFT, padx=(0, 15))
         

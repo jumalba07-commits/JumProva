@@ -1,0 +1,113 @@
+# 🗂️ JumProva
+
+### Professional File Organizer
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue) ![Python](https://img.shields.io/badge/python-3.11%2B-green) ![License](https://img.shields.io/badge/license-MIT-yellow) ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
+
+---
+
+## 📋 Description
+
+**JumProva** is an all-in-one desktop application to organize, clean, and manage your files professionally and easily. Designed for users who want to have **all their files under control**.
+
+---
+
+## ✨ Main Features
+
+### 📁 Organize
+- 📸 **Photos** → Sorted by `YEAR/MONTH/DAY/`
+- 🎬 **Videos** → Sorted by `YEAR/MONTH/DAY/`
+- 📄 **Documents** → Sorted by extension (`PDF/`, `DOCX/`, `XLSX/`, etc.)
+
+### 🔄 Desorganize
+- Reverse any organization made by the app
+- Support for Photos, Videos, Music, and Documents
+
+### 📝 Rename
+- Batch renaming with:
+  - Prefix / Suffix
+  - Auto-numbering
+  - Modification date
+  - Text replacement
+  - Lowercase / Uppercase
+
+### 🎵 Music
+- Organized by **Artist / Album / Year**
+- ID3 metadata extraction
+- Multiple folder structures
+
+### 🏷️ Metadata
+- Music file scanning
+- Metadata editor
+- File name cleaning
+- Standard format: `Artist - Title.mp3`
+
+### 🧹 System Cleaner
+- 🗑️ Recycle Bin
+- 📁 System temporary files
+- 🌐 Browser cache
+- 🖼️ Thumbnails
+- 📄 Empty files (0 B)
+- 📄 Small files (< X KB)
+- 📦 Large files (> X MB)
+- 📁 Old .log files
+- 💾 Backup files
+- ⬇️ Old downloads
+- 🔄 Duplicate files
+- 🗑️ Remove empty folders
+- 🛡️ **System file protection**
+
+---
+
+## 🛠️ Technologies Used
+
+- 🐍 **Python 3.11+**
+- 🖥️ **Tkinter** (Native GUI)
+- 🎵 **Mutagen** (Music metadata)
+- 🖼️ **Pillow** (Image processing)
+
+---
+
+## 📦 Installation & Usage
+
+### 🔧 Requirements
+- Python 3.11 or higher
+- Windows 10/11 (recommended)
+
+### 📥 Install dependencies
+
+pip install -r requirements.txt
+
+### 🚀 Run from source code
+
+python src/main.py
+
+### 📦 Compile to .exe
+
+pyinstaller JumProva.spec --clean
+
+---
+
+## 👨‍💻 Author
+
+**Juan José Rivera**  
+📧 jumalba@hotmail.com  
+🐙 github.com/jumalba07-commits
+
+---
+
+## 📅 Versions
+
+| Version | Date | Changes |
+|---|---|---|
+| 1.0.0 | 2026 | Initial release |
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT** License.
+
+---
+
+Made with ❤️ by Juan José Rivera

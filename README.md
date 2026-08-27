@@ -5,107 +5,106 @@
 
 # 🗂️ JumProva
 
-### Professional File Organizer
+### Organizador de Archivos Profesional
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue) 
+![Versión](https://img.shields.io/badge/version-1.0.0-blue) 
 ![Python](https://img.shields.io/badge/python-3.11%2B-green) 
-![License](https://img.shields.io/badge/license-MIT-yellow) 
-![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
+![Licencia](https://img.shields.io/badge/license-MIT-yellow) 
+![Plataforma](https://img.shields.io/badge/platform-Windows-lightgrey)
 
 ---
 
-## 📋 Description
+## 📋 Descripción
 
-**JumProva** is an all-in-one desktop application to organize, clean, and manage your files professionally and easily. Designed for users who want to have **all their files under control**.
+**JumProva** es una aplicación de escritorio todo en uno para organizar, limpiar y gestionar tus archivos de forma profesional y sencilla. Diseñada para usuarios que quieren tener **todos sus archivos bajo control**.
 
 ---
 
-## 📸 Screenshots
+## 📸 Capturas de pantalla
 
-| Organize | Music | Metadata |
+| Organizar | Música | Metadatos |
 |---|---|---|
-| ![Organize](screenshots/Organizar.jpg) | ![Music](screenshots/Musica.jpg) | ![Metadata](screenshots/Metadatos.jpg) |
+| ![Organizar](screenshots/Organizar.jpg) | ![Música](screenshots/Musica.jpg) | ![Metadatos](screenshots/Metadatos.jpg) |
 
-| Rename | Cleaner | Desorganize |
+| Renombrar | Limpiar | Desorganizar |
 |---|---|---|
-| ![Rename](screenshots/Renombrar.jpg) | ![Cleaner](screenshots/Limpiar.jpg) | ![Desorganize](screenshots/Desorganizar.jpg) |
+| ![Renombrar](screenshots/Renombrar.jpg) | ![Limpiar](screenshots/Limpiar.jpg) | ![Desorganizar](screenshots/Desorganizar.jpg) |
 
-| About |
+| Acerca de |
 |---|
-| ![About](screenshots/Acercade.jpg) |
+| ![Acerca de](screenshots/Acercade.jpg) |
 
 ---
 
-## ✨ Main Features
+## ✨ Características principales
 
-### 📁 Organize
-- 📸 **Photos** → Sorted by `YEAR/MONTH/DAY/`
-- 🎬 **Videos** → Sorted by `YEAR/MONTH/DAY/`
-- 📄 **Documents** → Sorted by extension (`PDF/`, `DOCX/`, `XLSX/`, etc.)
+### 📁 Organizar
+- 📸 **Fotos** → Clasificadas por `AÑO/MES/DÍA/`
+- 🎬 **Videos** → Clasificados por `AÑO/MES/DÍA/`
+- 📄 **Documentos** → Clasificados por extensión (`PDF/`, `DOCX/`, `XLSX/`, etc.)
 
-### 🔄 Desorganize
-- Reverse any organization made by the app
-- Support for Photos, Videos, Music, and Documents
+### 🔄 Desorganizar
+- Revertir cualquier organización realizada por la app
+- Soporte para Fotos, Videos, Música y Documentos
 
-### 📝 Rename
-- Batch renaming with:
-  - Prefix / Suffix
-  - Auto-numbering
-  - Modification date
-  - Text replacement
-  - Lowercase / Uppercase
+### 📝 Renombrar
+- Renombrado masivo con:
+  - Prefijo / Sufijo
+  - Numeración automática
+  - Fecha de modificación
+  - Reemplazo de texto
+  - Minúsculas / Mayúsculas
 
-### 🎵 Music
-- Organized by **Artist / Album / Year**
-- ID3 metadata extraction
-- Multiple folder structures
+### 🎵 Música
+- Organización por **Artista / Álbum / Año**
+- Extracción de metadatos ID3
+- Múltiples estructuras de carpetas
 
-### 🏷️ Metadata
-- Music file scanning
-- Metadata editor
-- File name cleaning
-- Standard format: `Artist - Title.mp3`
+### 🏷️ Metadatos
+- Escaneo de archivos de música
+- Editor de metadatos
+- Limpieza de nombres de archivos
+- Formato estándar: `Artista - Título.mp3`
 
-### 🧹 System Cleaner
-- 🗑️ Recycle Bin
-- 📁 System temporary files
-- 🌐 Browser cache
-- 🖼️ Thumbnails
-- 📄 Empty files (0 B)
-- 📄 Small files (< X KB)
-- 📦 Large files (> X MB)
-- 📁 Old .log files
-- 💾 Backup files
-- ⬇️ Old downloads
-- 🔄 Duplicate files
-- 🗑️ Remove empty folders
-- 🛡️ **System file protection**
+### 🧹 Limpieza de Sistema
+- 🗑️ Papelera de reciclaje
+- 📁 Archivos temporales del sistema
+- 🌐 Caché de navegadores
+- 🖼️ Miniaturas
+- 📄 Archivos vacíos (0 B)
+- 📄 Archivos pequeños (< X KB)
+- 📦 Archivos grandes (> X MB)
+- 📁 Archivos .log antiguos
+- 💾 Archivos de respaldo
+- ⬇️ Descargas antiguas
+- 🔄 Archivos duplicados
+- 🗑️ Eliminar carpetas vacías
+- 🛡️ **Protección de archivos del sistema**
 
-### ℹ️ About
-- App information and credits
+### ℹ️ Acerca de
+- Información de la aplicación y créditos
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tecnologías utilizadas
 
 - 🐍 **Python 3.11+**
-- 🖥️ **Tkinter** (Native GUI)
-- 🎵 **Mutagen** (Music metadata)
-- 🖼️ **Pillow** (Image processing)
+- 🖥️ **Tkinter** (GUI nativa)
+- 🎵 **Mutagen** (Metadatos de música)
+- 🖼️ **Pillow** (Procesamiento de imágenes)
 
 ---
 
-## 📦 Installation & Usage
+## 📦 Instalación y uso
 
-### 🔧 Requirements
-- Python 3.11 or higher
-- Windows 10/11 (recommended)
+### 🔧 Requisitos
+- Python 3.11 o superior
+- Windows 10/11 (recomendado)
 
-### 📥 Install dependencies
+### 📥 Instalar dependencias
 
 ```bash
 pip install -r requirements.txt
-
 ### 🚀 Ejecutar desde código fuente
 
 python src/main.py

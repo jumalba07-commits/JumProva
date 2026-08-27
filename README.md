@@ -76,58 +76,38 @@
 
 ### 📥 Instalar dependencias
 
-```bash
 pip install -r requirements.txt
-🚀 Ejecutar desde código fuente
-bash
+
+### 🚀 Ejecutar desde código fuente
+
 python src/main.py
-📦 Compilar a .exe
-bash
+
+### 📦 Compilar a .exe
+
 pyinstaller JumProva.spec --clean
-📁 Estructura del proyecto
-text
-JumProva/
-├── src/
-│   ├── assets/
-│   │   ├── jumprova.ico
-│   │   └── jumprova.png
-│   ├── gui/
-│   │   ├── main_window.py
-│   │   ├── organize_tab.py
-│   │   ├── desorganize_tab.py
-│   │   ├── rename_tab.py
-│   │   ├── music_tab.py
-│   │   ├── metadata_tab.py
-│   │   ├── cleaner_tab.py
-│   │   └── about_tab.py
-│   ├── core/
-│   │   ├── organizer.py
-│   │   ├── desorganizer.py
-│   │   ├── renamer.py
-│   │   ├── music_organizer.py
-│   │   ├── music_parser.py
-│   │   ├── metadata_manager.py
-│   │   ├── name_cleaner.py
-│   │   ├── file_handler.py
-│   │   └── models.py
-│   ├── config/
-│   │   └── settings.py
-│   └── main.py
-├── JumProva.spec
-├── requirements.txt
-└── README.md
-👨‍💻 Autor
-Juan José Rivera
-📧 jumalba@hotmail.com
+
+---
+
+## 👨‍💻 Autor
+
+**Juan José Rivera**  
+📧 jumalba@hotmail.com  
 🐙 github.com/jumalba07-commits
 
-📅 Versiones
-Versión	Fecha	Cambios
-1.0.0	2026	Lanzamiento inicial
-📝 Licencia
-Este proyecto está bajo la licencia MIT.
+---
 
-<div align="center">
+## 📅 Versiones
+
+| Versión | Fecha | Cambios |
+|---|---|---|
+| 1.0.0 | 2026 | Lanzamiento inicial |
+
+---
+
+## 📝 Licencia
+
+Este proyecto está bajo la licencia **MIT**.
+
+---
+
 Hecho con ❤️ por Juan José Rivera
-
-</div> ```

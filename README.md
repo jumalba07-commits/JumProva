@@ -1,36 +1,29 @@
-<div align="center">
-
 # 🗂️ JumProva
 
 ### Organizador de Archivos Profesional
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Python](https://img.shields.io/badge/python-3.11%2B-green)
-![License](https://img.shields.io/badge/license-MIT-yellow)
-![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
-
-</div>
+![Version](https://img.shields.io/badge/version-1.0.0-blue) ![Python](https://img.shields.io/badge/python-3.11%2B-green) ![License](https://img.shields.io/badge/license-MIT-yellow) ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
 
 ---
 
-## 📋 **Descripción**
+## 📋 Descripción
 
 **JumProva** es una aplicación de escritorio todo en uno para organizar, limpiar y gestionar tus archivos de forma profesional y sencilla. Diseñada para usuarios que quieren tener **todos sus archivos bajo control**.
 
 ---
 
-## ✨ **Características principales**
+## ✨ Características principales
 
-### 📁 **Organizar**
+### 📁 Organizar
 - 📸 **Fotos** → Clasificadas por `AÑO/MES/DÍA/`
 - 🎬 **Videos** → Clasificados por `AÑO/MES/DÍA/`
 - 📄 **Documentos** → Clasificados por extensión (`PDF/`, `DOCX/`, `XLSX/`, etc.)
 
-### 🔄 **Desorganizar**
+### 🔄 Desorganizar
 - Revertir cualquier organización realizada por la app
 - Soporte para Fotos, Videos, Música y Documentos
 
-### 📝 **Renombrar**
+### 📝 Renombrar
 - Renombrado masivo con:
   - Prefijo / Sufijo
   - Numeración automática
@@ -38,22 +31,18 @@
   - Reemplazo de texto
   - Minúsculas / Mayúsculas
 
-### 🎵 **Música**
+### 🎵 Música
 - Organización por **Artista / Álbum / Año**
 - Extracción de metadatos ID3
-- Múltiples estructuras de carpetas:
-  - `Año/Álbum/Artista`
-  - `Artista/Año/Álbum`
-  - `Álbum/Artista`
-  - `Año/Género`
+- Múltiples estructuras de carpetas
 
-### 🏷️ **Metadatos**
+### 🏷️ Metadatos
 - Escaneo de archivos de música
-- Editor de metadatos (Artista, Álbum, Título, Año, Género, Nº Pista)
+- Editor de metadatos
 - Limpieza de nombres de archivos
 - Formato estándar: `Artista - Título.mp3`
 
-### 🧹 **Limpieza de Sistema**
+### 🧹 Limpieza de Sistema
 - 🗑️ Papelera de reciclaje
 - 📁 Archivos temporales del sistema
 - 🌐 Caché de navegadores
@@ -62,28 +51,15 @@
 - 📄 Archivos pequeños (< X KB)
 - 📦 Archivos grandes (> X MB)
 - 📁 Archivos .log antiguos
-- 💾 Archivos de respaldo (.bak, .tmp, .old)
+- 💾 Archivos de respaldo
 - ⬇️ Descargas antiguas
 - 🔄 Archivos duplicados
 - 🗑️ Eliminar carpetas vacías
-- **🛡️ Protección de archivos del sistema**
-
-### ℹ️ **Acerca de**
-- Información de la aplicación
-- Créditos y contacto
+- 🛡️ **Protección de archivos del sistema**
 
 ---
 
-## 🎨 **Diseño**
-
-- 🌙 **Modo oscuro moderno**
-- 📦 **Diseño consistente** en todas las pestañas
-- 🖥️ **Pantalla completa**
-- 🎯 **Interfaz intuitiva y limpia**
-
----
-
-## 🛠️ **Tecnologías utilizadas**
+## 🛠️ Tecnologías utilizadas
 
 - 🐍 **Python 3.11+**
 - 🖥️ **Tkinter** (GUI nativa)
@@ -92,13 +68,66 @@
 
 ---
 
-## 📦 **Instalación y uso**
+## 📦 Instalación y uso
 
-### 🔧 **Requisitos**
+### 🔧 Requisitos
 - Python 3.11 o superior
 - Windows 10/11 (recomendado)
 
-### 📥 **Instalar dependencias**
+### 📥 Instalar dependencias
 
 ```bash
 pip install -r requirements.txt
+🚀 Ejecutar desde código fuente
+bash
+python src/main.py
+📦 Compilar a .exe
+bash
+pyinstaller JumProva.spec --clean
+📁 Estructura del proyecto
+text
+JumProva/
+├── src/
+│   ├── assets/
+│   │   ├── jumprova.ico
+│   │   └── jumprova.png
+│   ├── gui/
+│   │   ├── main_window.py
+│   │   ├── organize_tab.py
+│   │   ├── desorganize_tab.py
+│   │   ├── rename_tab.py
+│   │   ├── music_tab.py
+│   │   ├── metadata_tab.py
+│   │   ├── cleaner_tab.py
+│   │   └── about_tab.py
+│   ├── core/
+│   │   ├── organizer.py
+│   │   ├── desorganizer.py
+│   │   ├── renamer.py
+│   │   ├── music_organizer.py
+│   │   ├── music_parser.py
+│   │   ├── metadata_manager.py
+│   │   ├── name_cleaner.py
+│   │   ├── file_handler.py
+│   │   └── models.py
+│   ├── config/
+│   │   └── settings.py
+│   └── main.py
+├── JumProva.spec
+├── requirements.txt
+└── README.md
+👨‍💻 Autor
+Juan José Rivera
+📧 jumalba@hotmail.com
+🐙 github.com/jumalba07-commits
+
+📅 Versiones
+Versión	Fecha	Cambios
+1.0.0	2026	Lanzamiento inicial
+📝 Licencia
+Este proyecto está bajo la licencia MIT.
+
+<div align="center">
+Hecho con ❤️ por Juan José Rivera
+
+</div> ```

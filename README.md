@@ -1,3 +1,8 @@
+![GitHub stars](https://img.shields.io/github/stars/jumalba07-commits/JumProva)
+![GitHub forks](https://img.shields.io/github/forks/jumalba07-commits/JumProva)
+![GitHub issues](https://img.shields.io/github/issues/jumalba07-commits/JumProva)
+
+
 # 🗂️ JumProva
 
 ### Organizador de Archivos Profesional

@@ -1,0 +1,14 @@
+# GUI
+# tkinter viene incluido con Python
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+Pillow>=10.0.0
+mutagen>=1.46.0  
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Para empaquetar
+pyinstaller>=6.0.0
